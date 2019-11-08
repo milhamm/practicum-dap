@@ -14,13 +14,13 @@ type ArrType [N]RecType
 
 func main(){
 	var isinya ArrType = ArrType{
-		RecType{"Ancok",2,3.2},
-		RecType{"Bajingan",20,3.2},
-		RecType{"Cuki",85,3.2},
-		RecType{"Dick",1,3.2},
-		RecType{"Entod",3,3.2},
-		RecType{"Fuck",4,3.2},
-		RecType{"Goblok",20,3.2},
+		RecType{"Ancok",2,3.1},
+		RecType{"Bajingan",20,40.1},
+		RecType{"Cuki",85,1.1},
+		RecType{"Dick",1,1.2},
+		RecType{"Entod",3,5.2},
+		RecType{"Fuck",4,7.2},
+		RecType{"Goblok",20,8.2},
 	}
 
 	fmt.Println(rmax(isinya))
@@ -30,12 +30,12 @@ func main(){
 }
 
 func rmax(data ArrType) int{
-	var max int = data[0].f2
+	var max float64 = data[0].f3
 	var index = 0
 
 	for i, val := range data{
-		if max < val.f2 {
-			max = val.f2
+		if max < val.f3 {
+			max = val.f3
 			index = i
 		}
 	}
