@@ -1,3 +1,10 @@
+/*
+	Name	: Muhammad Ilham Mubarak
+	SID		: 1301194276
+	This program is used to calculate the closest distance from the given input points
+	The input are terminated when its given pair of 0.0 points
+	It will compare all given points
+*/
 package main
 
 import "fmt"
@@ -48,7 +55,9 @@ func main(){
 	readPoints()
 	getClosestPoint(&p1, &p2)
 
-	fmt.Printf("Closest Point are (%.1f,%.1f) and (%.1f,%.1f) and the distance is %.1f", p1.x, p1.y, p2.x, p2.y, distance(p1, p2))
+	fmt.Println(p1, p2)
+
+	fmt.Printf("Closest Point are (%.1f,%.1f) and (%.1f,%.1f) and the distance is %.1f\n", p1.x, p1.y, p2.x, p2.y, distance(p1, p2))
 	fmt.Printf("Name \t: Muhammad Ilham Mubarak\n")
 	fmt.Printf("SID \t: 1301194276\n")
 }
