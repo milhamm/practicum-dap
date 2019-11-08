@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const N = 2019
+const N = 7
 
 type RecType struct{
 	f1 string
@@ -70,9 +70,8 @@ func found(data ArrType, key string) bool{
 func pos(data ArrType, key string) int {
 	var leftIndex int = 0
 	var rightIndex int = N
-	var found bool = false
 
-	for leftIndex < rightIndex  && !found{
+	for leftIndex < rightIndex{
 		var median = (leftIndex+rightIndex) / 2
 		
 		if data[median].f1 < key {
@@ -80,7 +79,6 @@ func pos(data ArrType, key string) int {
 		} else if data[median].f1 > key{
 			rightIndex = median
 		} else{
-			found = true
 			return median
 		}
 	}
