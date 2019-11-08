@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const N = 7
+const N = 2019
 
 type RecType struct{
 	f1 string
@@ -14,19 +14,19 @@ type ArrType [N]RecType
 
 func main(){
 	var isinya ArrType = ArrType{
-		RecType{"Ancok",2,3.1},
-		RecType{"Bajingan",20,40.1},
-		RecType{"Cuki",85,1.1},
-		RecType{"Dick",1,1.2},
-		RecType{"Entod",3,5.2},
-		RecType{"Fuck",4,7.2},
-		RecType{"Goblok",20,8.2},
+		RecType{"Aang",2,3.1},
+		RecType{"Bambang",20,40.1},
+		RecType{"Cecep",85,1.1},
+		RecType{"Didit",1,1.2},
+		RecType{"Erlang",3,5.2},
+		RecType{"Farhan",4,7.2},
+		RecType{"Gunawan",20,8.2},
 	}
 
 	fmt.Println(rmax(isinya))
 	fmt.Println(imin(isinya))
-	fmt.Println(found(isinya, "Ancok"))
-	fmt.Println(pos(isinya, "Goblok"))
+	fmt.Println(found(isinya, "Aang"))
+	fmt.Println(pos(isinya, "Erlang"))
 }
 
 func rmax(data ArrType) int{
