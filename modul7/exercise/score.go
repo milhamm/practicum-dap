@@ -26,11 +26,11 @@ func readMatch(winnerClub *[]string, clubA, clubB string)  {
 
 	for scoreA >= 0 && scoreB >= 0 {
 		if scoreA > scoreB {
-			(*winnerClub)[i-1] = clubA
+			fillWinner(winnerClub, clubA)
 		} else if scoreA < scoreB {
-			(*winnerClub)[i-1] = clubB
+			fillWinner(winnerClub, clubB)
 		} else {
-			(*winnerClub)[i-1] = "Draw"
+			fillWinner(winnerClub, "Draw")
 		}
 		i++
 
