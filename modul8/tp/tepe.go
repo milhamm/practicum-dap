@@ -29,18 +29,16 @@ func main(){
 	fmt.Println(pos(isinya, "Erlang"))
 }
 
-func rmax(data ArrType) int{
+func rmax(data ArrType) float64{
 	var max float64 = data[0].f3
-	var index = 0
 
-	for i, val := range data{
+	for _, val := range data{
 		if max < val.f3 {
 			max = val.f3
-			index = i
 		}
 	}
 
-	return index
+	return max
 }
 
 func imin(data ArrType) int{
