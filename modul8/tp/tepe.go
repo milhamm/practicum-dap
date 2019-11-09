@@ -32,9 +32,9 @@ func main(){
 func rmax(data ArrType) float64{
 	var max float64 = data[0].f3
 
-	for _, val := range data{
-		if max < val.f3 {
-			max = val.f3
+	for i := 0; i < N; i++ {
+		if max < data[i].f3 {
+			max = data[i].f3
 		}
 	}
 
@@ -45,9 +45,9 @@ func imin(data ArrType) int{
 	var min int = data[0].f2
 	var index = 0
 
-	for i, val := range data{
-		if min > val.f2 && val.f2 != 0{
-			min = val.f2
+	for i := 0; i < N; i++ {
+		if min > data[i].f2 && data[i].f2 != 0{
+			min = data[i].f2
 			index = i
 		}
 	}
@@ -56,8 +56,9 @@ func imin(data ArrType) int{
 }
 
 func found(data ArrType, key string) bool{
-	for _, val := range data{
-		if val.f1 == key{
+
+	for i := 0; i < N; i++ {
+		if data[i].f1 == key{
 			return true
 		}
 	}
@@ -71,7 +72,6 @@ func pos(data ArrType, key string) int {
 
 	for leftIndex < rightIndex{
 		var median = (leftIndex+rightIndex) / 2
-		
 		if data[median].f1 < key {
 			leftIndex = median + 1
 		} else if data[median].f1 > key{
