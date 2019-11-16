@@ -38,3 +38,15 @@ func TestSearch(t *testing.T){
 		t.Errorf("Failed! Expected value : %v", expectedOutputFindSecond)
 	}
 }
+
+func BenchmarkInsertionSorting(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        isSort(&tab, 10)
+    }
+}
+
+func BenchmarkSelectionSorting(b *testing.B) {
+    for i := 0; i < b.N; i++ {
+        mSort(&tab, 10)
+    }
+}

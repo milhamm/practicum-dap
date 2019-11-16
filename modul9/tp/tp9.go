@@ -18,7 +18,6 @@ type RecType struct{
 type ArrType [MAXSIZE]RecType
 
 func isSort(tab *ArrType, nSize int){
-	
 	var i int = 1
 	for i < nSize {
 		temp := tab[i].count
