@@ -1,10 +1,3 @@
-/*
-	Name : Muhammad Ilham Mubarak
-	Kelas: IF-43-INT
-	SID : 1301194276
-	This program is made to implement the insertion sort and selection sort. 
-	Sorting the given array in ascending and descending order
-*/ 
 
 package main
 
